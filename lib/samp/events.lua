@@ -107,7 +107,7 @@ INCOMING_RPCS[RPC.SETPLAYERTEAM]              = {'onSetPlayerTeam', {playerId = 
 INCOMING_RPCS[RPC.PUTPLAYERINVEHICLE]         = {'onPutPlayerInVehicle', {vehicleId = 'int16'}, {seatId = 'int8'}}
 INCOMING_RPCS[RPC.REMOVEPLAYERFROMVEHICLE]    = {'onRemovePlayerFromVehicle'}
 INCOMING_RPCS[RPC.SETPLAYERCOLOR]             = {'onSetPlayerColor', {playerId = 'int16'}, {color = 'int32'}}
-INCOMING_RPCS[RPC.DISPLAYGAMETEXT]            = {'onDisplayGameText', {style = 'int32'}, {time = 'int32'}, {text = 'string8'}}
+INCOMING_RPCS[RPC.DISPLAYGAMETEXT]            = {'onDisplayGameText', {style = 'int32'}, {time = 'int32'}, {text = 'string32'}}
 INCOMING_RPCS[RPC.FORCECLASSSELECTION]        = {'onForceClassSelection'}
 INCOMING_RPCS[RPC.ATTACHOBJECTTOPLAYER]       = {'onAttachObjectToPlayer', {objectId = 'int16'}, {playerId = 'int16'}, {offsets = 'vector3d'}, {rotation = 'vector3d'}}
 -- menuId = 'int8', menuTitle = 'string256', x = 'float', y = 'float', twoColumns = 'bool32', columns = 'table', rows = 'table', menu = 'bool32'
@@ -178,26 +178,26 @@ INCOMING_RPCS[RPC.SETOBJECTMATERIAL]          = {
 INCOMING_RPCS[RPC.SETVEHICLEPARAMSEX]         = {'onSetVehicleParamsEx',
   {vehicleId = 'int16'},
   {params = {
-    {engine = 'bool8'},
-    {lights = 'bool8'},
-    {alarm = 'bool8'},
-    {doors = 'bool8'},
-    {bonnet = 'bool8'},
-    {boot = 'bool8'},
-    {objective = 'bool8'},
-    {unknown = 'bool8'}
+    {engine = 'int8'},
+    {lights = 'int8'},
+    {alarm = 'int8'},
+    {doors = 'int8'},
+    {bonnet = 'int8'},
+    {boot = 'int8'},
+    {objective = 'int8'},
+    {unknown = 'int8'}
   }},
   {doors = {
-    {driver = 'bool8'},
-    {passenger = 'bool8'},
-    {backleft = 'bool8'},
-    {backright = 'bool8'}
+    {driver = 'int8'},
+    {passenger = 'int8'},
+    {backleft = 'int8'},
+    {backright = 'int8'}
   }},
   {windows = {
-    {driver = 'bool8'},
-    {passenger = 'bool8'},
-    {backleft = 'bool8'},
-    {backright = 'bool8'}
+    {driver = 'int8'},
+    {passenger = 'int8'},
+    {backleft = 'int8'},
+    {backright = 'int8'}
   }}
 }
 INCOMING_RPCS[RPC.SETPLAYERATTACHEDOBJECT]    = {'onSetPlayerAttachedObject',
