@@ -1,0 +1,8 @@
+{
+  "admintools": "2.6.0.0",
+  "libraries": {
+    "samp.lua": "2.0.4",
+    "aeslua": "0.2.1",
+    "ImGui": "1.1.2"
+  }
+}
