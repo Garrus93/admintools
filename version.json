@@ -1,5 +1,5 @@
 {
-  "version": "2.6.2.2",
+  "version": "2.7",
   "libraries": {
     "samp.lua": "2.0.4",
     "aeslua": "0.2.1",
