@@ -3,9 +3,8 @@
 -- Copyright (c) 2016, FYP @ BlastHack Team <blast.hk>
 -- https://github.com/THE-FYP/SAMP.Lua
 
-
-local BitStreamIO = require 'lib.samp.events.bitstream_io'
-local utils = require 'lib.samp.events.utils'
+local BitStreamIO = require 'samp.events.bitstream_io'
+local utils = require 'samp.events.utils'
 local handler = {}
 
 --- onSendGiveDamage, onSendTakeDamage
@@ -518,7 +517,7 @@ function handler.on_create_object_reader(bs)
 	data.noCameraCol = read.bool8(bs)
 	data.attachToVehicleId = read.int16(bs)
 	data.attachToObjectId = read.int16(bs)
-	if data.attachToVehicleId ~= 65535 or data.attachToPlayerId ~= 65535 then
+	if data.attachToVehicleId ~= 65535 or data.attachToObjectId ~= 65535 then
 		data.attachOffsets = read.vector3d(bs)
 		data.attachRotation = read.vector3d(bs)
 		data.syncRotation = read.bool8(bs)
@@ -550,7 +549,7 @@ function handler.on_create_object_writer(bs, data)
 	write.bool8(bs, data.noCameraCol)
 	write.int16(bs, data.attachToVehicleId)
 	write.int16(bs, data.attachToObjectId)
-	if data.attachToVehicleId ~= 65535 or data.attachToPlayerId ~= 65535 then
+	if data.attachToVehicleId ~= 65535 or data.attachToObjectId ~= 65535 then
 		write.vector3d(bs, data.attachOffsets)
 		write.vector3d(bs, data.attachRotation)
 		write.bool8(bs, data.syncRotation)
